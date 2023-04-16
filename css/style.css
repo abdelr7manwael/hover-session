@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+}
+
+.container{
+    width: 80%;
+    margin: auto; /* to center the container*/
+    text-align: center; /* optinal */
+}
+
+.clear{
+    clear: both;
+}
+
+/* --------------------------------- */
+.messi{
+    padding: 50px 0px;
+    background-color: #212121;
+}
+
+.messi .item{
+    border: 2px solid white;
+    width: 24%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    margin: 0px 5px;
+}
+
+.messi .item img{
+    width: 100%;
+    transition: transform 1s 1s;
+   
+}
+
+.messi .item .info{
+    background-color: rgba(100, 60, 180,0.3);
+    height: 100%;
+    position: absolute;
+    top:0;
+    z-index: 9999;
+    width: 100%;
+    visibility: hidden;
+    transition: transform 1s;
+}
+
+.messi .item .info h3 {
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-bottom: 10px ;
+}
+.messi .item .info p {
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    font-style: italic;
+}
+.messi .item .info h3,
+.messi .item .info p{
+    position: relative;
+    left: 110%;
+    transition: left 1s 2s; 
+}
+.messi .item:hover .info h3,
+.messi .item:hover .info p{
+    left: 0;
+}
+
+.messi .item:hover .info{
+    visibility: visible;
+    transform: rotate(360deg);   
+}
+
+.messi .item:hover img{
+    transform: scale(1.15);
+}
+
+.animation{
+    padding: 50px 0px;
+}
+
+.animation img,
+.animation i{
+    font-size: 40px;
+    width: 200px;
+    animation-name: spinner;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spinner {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
